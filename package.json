@@ -1,0 +1,24 @@
+{
+  "name": "projetocientifico",
+  "version": "1.0.0",
+  "description": "server side, projeto Ceara cientifico",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabrielmarquezin/Backend-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabrielmarquezin/Backend-project/issues"
+  },
+  "homepage": "https://github.com/Gabrielmarquezin/Backend-project#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "firebase-admin": "^11.0.1"
+  }
+}
