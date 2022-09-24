@@ -6,3 +6,4 @@ const produto1 = {
     quantidade: 5, //exemplo
     preco: 5200 //exemplo
 }
+
