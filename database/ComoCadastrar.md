@@ -1,25 +1,27 @@
 ## Como cadastrar um novo produto
 
-1- coloque dentro de uma # array. exemplo: const produtos = [
+1- coloque dentro de uma **array**. <br/>
+
+exemplo: const produtos = [
     {
         tipo: 'coloque o tipo',
         marca: 'coloque o nome da marca',
         quantidade: 'estoque do prodduto',
         preco: 'quanto é o produto'
-    },
+    },<br/>
     {
         tipo: 'coloque o tipo',
         marca: 'coloque o nome da marca',
         quantidade: 'estoque do prodduto',
         preco: 'quanto é o produto'
-    },
+    },<br/>
     {
         # novo produto 
     }
-]
+]<br/>
 
 
-2-  para cada # objeto, representado por '{}', e um novo produto, no exemplo anterior, tem 2  produtos
+2-  para cada **objeto**, representado por '{}', e um novo produto, no exemplo anterior, tem 2  produtos
 
 um produto diferente e criado um novo objeto, se um produto tem os mesmos atributos(marca, nome, tipo e preco)
 e feito somente um objeto e aumenta +1 no atributo quantidade
