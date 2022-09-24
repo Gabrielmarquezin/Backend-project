@@ -4,19 +4,19 @@
 
 exemplo: const produtos = [<br/>
     {<br/>
-        tipo: 'coloque o tipo',<br/>
-        marca: 'coloque o nome da marca',<br/>
-        quantidade: 'estoque do prodduto',<br/>
-        preco: 'quanto é o produto'<br/>
+     &nbsp; &nbsp;tipo: 'coloque o tipo',<br/>
+     &nbsp; &nbsp;  marca: 'coloque o nome da marca',<br/>
+     &nbsp; &nbsp;  quantidade: 'estoque do prodduto',<br/>
+     &nbsp; &nbsp;   preco: 'quanto é o produto'<br/>
     },<br/>
     {<br/>
-        tipo: 'coloque o tipo',<br/>
-        marca: 'coloque o nome da marca',<br/>
-        quantidade: 'estoque do prodduto',<br/>
-        preco: 'quanto é o produto'<br/>
+     &nbsp; &nbsp; tipo: 'coloque o tipo',<br/>
+     &nbsp; &nbsp;marca: 'coloque o nome da marca',<br/>
+     &nbsp; &nbsp;quantidade: 'estoque do prodduto',<br/>
+     &nbsp; &nbsp;preco: 'quanto é o produto'<br/>
     },<br/>
     {<br/>
-        # novo produto <br/>
+     &nbsp;&nbsp;# novo produto <br/>
     }<br/>
 ]<br/>
 
