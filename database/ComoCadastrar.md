@@ -2,7 +2,7 @@
 
 1- coloque dentro de uma **array**. <br/>
 
-exemplo: const produtos = [
+exemplo: const produtos = [<br/>
     {
         tipo: 'coloque o tipo',
         marca: 'coloque o nome da marca',
@@ -17,7 +17,7 @@ exemplo: const produtos = [
     },<br/>
     {
         # novo produto 
-    }
+    }<br/>
 ]<br/>
 
 
