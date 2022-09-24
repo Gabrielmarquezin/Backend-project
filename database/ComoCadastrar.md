@@ -1,6 +1,6 @@
 ## Como cadastrar um novo produto
 
-1- coloque dentro de uma **array**. <br/>
+1- coloque dentro de um **array**. <br/>
 
 exemplo: const produtos = [<br/>
     {<br/>
@@ -21,12 +21,12 @@ exemplo: const produtos = [<br/>
 ]<br/>
 
 
-2-  para cada **objeto**, representado por '{}', e um novo produto, no exemplo anterior, tem 2  produtos
+2-  para cada **objeto**, representado por '{}', é um novo produto, no exemplo anterior tem 2  produtos<br/>
 
-um produto diferente e criado um novo objeto, se um produto tem os mesmos atributos(marca, nome, tipo e preco)
-e feito somente um objeto e aumenta +1 no atributo quantidade
+um produto diferente é criado um novo objeto, se um produto tem os mesmos atributos(marca, nome, tipo e preco)
+é feito somente um objeto e aumenta +1 no atributo quantidade
 
-exemplo: um produto tem marca: soya, tipo: oleo e preco: 15, outro produto tem os mesmos atribiutos, entao
+exemplo: um produto tem marca: soya, tipo: oleo e preco: 15, outro produto tem os mesmos atributos, entao
 cria apenas um objeto e acrescenta +1 no atributo quantidade, ou seja quantidade = 2(quantidade: 2)
 
 caso outro produto tenha algum atributo diferente, sera criado um novo objeto.
@@ -34,14 +34,14 @@ caso outro produto tenha algum atributo diferente, sera criado um novo objeto.
 
 ## SISTEMA DE PASTAS
 
-o registro de produtos sera na pasta database/schemas
+o registro de produtos sera na pasta database/schemas<br/>
 terá 3 pastas: mercado1, mercado2, mercado3
 
-para cada pasta tera um arquivo .js, onde sera registrado os produtos, entao ai sera feito os passos do exemplo anterior
-em cada arquivo tem um exemplo, apague e faça outro ou apenas continue substituindo os valores e adicionando novos objetos.
+para cada pasta tera um arquivo .js, onde sera registrado os produtos, entao ai sera feito os passos do exemplo anterior <br/>
+em cada arquivo tem um exemplo, apague e faça outro ou apenas continue, substituindo os valores e adicionando novos objetos.
 
 
-obs: os produtos tem que ser registrados em seus respectivos mercado
+obs: os produtos tem que ser registrados em seus respectivos mercado<br/>
 para cada produto tem seu mercado
 
 
