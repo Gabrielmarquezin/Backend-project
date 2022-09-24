@@ -3,20 +3,20 @@
 1- coloque dentro de uma **array**. <br/>
 
 exemplo: const produtos = [<br/>
-    {
-        tipo: 'coloque o tipo',
-        marca: 'coloque o nome da marca',
-        quantidade: 'estoque do prodduto',
-        preco: 'quanto é o produto'
+    {<br/>
+        tipo: 'coloque o tipo',<br/>
+        marca: 'coloque o nome da marca',<br/>
+        quantidade: 'estoque do prodduto',<br/>
+        preco: 'quanto é o produto'<br/>
     },<br/>
-    {
-        tipo: 'coloque o tipo',
-        marca: 'coloque o nome da marca',
-        quantidade: 'estoque do prodduto',
-        preco: 'quanto é o produto'
+    {<br/>
+        tipo: 'coloque o tipo',<br/>
+        marca: 'coloque o nome da marca',<br/>
+        quantidade: 'estoque do prodduto',<br/>
+        preco: 'quanto é o produto'<br/>
     },<br/>
-    {
-        # novo produto 
+    {<br/>
+        # novo produto <br/>
     }<br/>
 ]<br/>
 
