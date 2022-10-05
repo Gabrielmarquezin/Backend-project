@@ -1,4 +1,4 @@
-const bd = require('../infra/conection')
+const bd = require('../infra/conection.js')
 
 
 
