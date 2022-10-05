@@ -8,10 +8,13 @@ app.use(express.urlencoded({extended: false}))
 app.use(cors())
 
 app.get('/', (req, res)=>{
-    res.send('Ola mundo')
+    const obj = require('../server/data/getMercado1.js')
+    obj.getProduct().then(a =>{
+        res.send(a)
+    })
 })
 
 app.listen(port, ()=>{
-    console.log('rodando no link: http://localhost:2000/')
+    console.log('rodando no link: https://ceara-cientifico.herokuapp.com/')
 })
 

@@ -391,3 +391,4 @@ const mercado1 = [
     
 ]
 
+module.exports = mercado1
