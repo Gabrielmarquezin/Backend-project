@@ -1,8 +1,16 @@
-//modelo do objeto
+//Deirton
+const dataDeirton = require('../../datas/mercado3.js')
+const db = require('../../../server/infra/conection.js')
+const batch = db.batch()
 
-const produtos = [{
-    tipo: 'oleo', //exemplo
-    marca: 'soya', //exemplo
-    quantidade: 5, //exemplo
-    preco: 5300 //exemplo
-}]
+async function setDoc(){
+    dataDeirton.forEach(element => {
+        const docRef = db.collection('Deirton').doc()
+        batch.set(docRef, element)
+    })
+
+    const response = await batch.commit()
+    console.log(response)
+}
+
+setDoc()

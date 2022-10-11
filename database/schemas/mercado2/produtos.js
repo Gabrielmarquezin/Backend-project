@@ -1,9 +1,17 @@
 //modelo do objeto
+const dataFranciso = require('../../datas/mercado2.js')
+const db = require('../../../server/infra/conection.js')
+const batch = db.batch()
 
-const produtos = [{
-    tipo: 'oleo', //exemplo
-    marca: 'soya', //exemplo
-    quantidade: 5, //exemplo
-    preco: 5300 //exemplo
-}]
+async function setDoc(){
+    dataFranciso.forEach(element =>{
+        const refDoc = db.collection('Francisco').doc()
+        batch.set(refDoc, element)
+    })
+
+    const response = await batch.commit()
+    console.log(response)
+}
+
+setDoc()
 
