@@ -1,5 +1,5 @@
 const produtos = require('../data/getMercado1.js')
-const cesta = ['Arroz', 'Feijao', 'Oleo', 'Margarina', 'Macarrao', 'Farinha', 'Leite', 'Cuscuz', 'Sardinha', 'Acucar', 'Bolacha', 'Sal', 'Polpa']
+const cesta = ['Arroz', 'Feijao', 'Oleo', 'Margarina', 'Macarrao', 'Farinha', 'Leite', 'Cuscuz', 'Sardinha', 'Acucar', 'Bolacha', 'Sal', 'Polpa', 'Cafe']
 
 const Media = {
 
