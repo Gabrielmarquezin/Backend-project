@@ -18,9 +18,11 @@ Route.get('/:mercado/produtos', async (req, res)=>{
     try {
         const mercado = req.params.mercado
         const tipo = req.query['tipo']
-        produtos.setTipo(tipo, mercado)
+        const tamanho = req.query['tamanho']
+        
+        produtos.setTipo(tipo, mercado, tamanho)
         const dataProduct = await produtos.getProduct()
-
+        
         if(dataProduct){
             res.status(200).send(dataProduct)
         }

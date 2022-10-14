@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 const Route = require('./route/routeBiga.js')
+const route = require('./route/routeMedia.js')
 const port = process.env.PORT || 2000
 
 app.use(express.json())
@@ -9,6 +10,7 @@ app.use(express.urlencoded({extended: false}))
 app.use(cors())
 
 app.use('/', Route)
+app.use('/', route)
 
 app.listen(port, ()=>{
     console.log('rodando no link: https://ceara-cientifico.herokuapp.com/')

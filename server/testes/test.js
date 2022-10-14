@@ -1,4 +1,4 @@
-
+const bd = require('../infra/conection.js')
 
 /*
      TRANSAÇOES 
@@ -47,3 +47,20 @@ async function setName(nome){
 setName("oafada")
 
 */
+async function gett(tamanho){
+    const arr = []
+    const produtos = await bd.collection('biga').where('tipo', '==', 'carne').orderBy('preco').limit(1).get()
+    produtos.forEach(e =>{
+        arr.push(e.data())
+        
+    })
+    console.log(arr)
+    
+   if(tamanho > 0){
+    console.log('fudeu')
+   }else{
+    console.log('funcionou')
+   }
+}
+gett(1)
+
