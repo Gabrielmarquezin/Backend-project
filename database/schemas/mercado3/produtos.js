@@ -5,7 +5,7 @@ const batch = db.batch()
 
 async function setDoc(){
     dataDeirton.forEach(element => {
-        const docRef = db.collection('Deirton').doc()
+        const docRef = db.collection('deirton').doc()
         batch.set(docRef, element)
     })
 

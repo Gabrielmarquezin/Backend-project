@@ -4,6 +4,7 @@ const path = require('path')
 const app = express()
 const Route = require('./route/routeBiga.js')
 const route = require('./route/routeMedia.js')
+const RouteCat = require('./route/categorias.js')
 const port = process.env.PORT || 2000
 
 app.use(express.json())
@@ -17,6 +18,7 @@ app.set('views', path.join(__dirname, "views"))
 
 app.use('/', Route)
 app.use('/', route)
+app.use('/', RouteCat)
 
 app.get('/', (req, res)=>{
     res.render('index')

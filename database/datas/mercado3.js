@@ -1,190 +1,271 @@
 const dataDeirton = [
     {
-        tipo: 'Arroz',
+        tipo: 'arroz',
         marca: '101',
         description: 'Arroz branco',
         pesoKG: 1,
-        preco: 4.29
+        preco: 4.29,
+        estado: null,
+        classificacao: 'branco',
+        img: null
     },
     {
-        tipo: 'Arroz',
+        tipo: 'arroz',
         marca: '101',
-        description: 'Arroz parbolizado',
+        description: 'Arroz parboilizado',
         pesoKG: 1,
-        preco: 4.29
+        preco: 4.29,
+        estado: null,
+        classificacao: 'parboilizado',
+        img: null
     },
     {
-        tipo: 'Arroz',
-        marca: 'coraçoes',
+        tipo: 'arroz',
+        marca: 'coracoes',
         description: 'Arroz branco',
         pesoKG: 1,
-        preco: 4.19
+        preco: 4.19,
+        estado: null,
+        classificacao: 'branco',
+        img: null
     },
     {
-        tipo: 'Arroz',
+        tipo: 'arroz',
         marca: 'namorado',
         description: 'Arroz branco',
         pesoKG: 1,
-        preco: 4.59
+        preco: 4.59,
+        estado: null,
+        classificacao: 'branco',
+        img: null
     },
     {
-        tipo: 'Arroz',
+        tipo: 'arroz',
         marca: 'namorado',
-        description: 'Arroz parbolizado',
+        description: 'Arroz parboilizado',
         pesoKG: 1,
-        preco: 4.29
+        preco: 4.29,
+        estado: null,
+        classificacao: 'parboilizado',
+        img: null
     },
     {
-        tipo: 'Arroz',
+        tipo: 'arroz',
         marca: 'achei!',
         description: 'Arroz branco',
         pesoKG: 1,
-        preco: 3.79
+        preco: 3.79,
+        estado: null,
+        classificacao: 'branco',
+        img: null
     },
     {
-        tipo: 'Arroz',
+        tipo: 'arroz',
         marca: 'achei!',
         description: 'Arroz parbolizado',
         pesoKG: 1,
-        preco: 3.79
+        preco: 3.79,
+        estado: null,
+        classificacao: 'parboilizado',
+        img: null
     },
     {
-        tipo: 'Arroz',
-        marca: 'Pai_Joao',
+        tipo: 'arroz',
+        marca: 'pai Joao',
         description: 'Arroz branco',
         pesoKG: 1,
-        preco: 4.49
+        preco: 4.49,
+        estado: null,
+        classificacao: 'branco',
+        img: null
     },
     {
-        tipo: 'Arroz',
-        marca: 'Pai_Joao',
+        tipo: 'arroz',
+        marca: 'pai joao',
         description: 'Arroz parbolizado',
         pesoKG: 1,
-        preco: 4.29
+        preco: 4.29,
+        estado: null,
+        classificacao: 'parboilizado',
+        img: null
     },
     {
-        tipo: 'Arroz',
-        marca: 'panelaço',
+        tipo: 'arroz',
+        marca: 'panelaco',
         description: 'Arroz branco',
         pesoKG: 1,
-        preco: 3.79
+        preco: 3.79,
+        estado: null,
+        classificacao: 'branco',
+        img: null
     },
     {
-        tipo: 'Arroz',
+        tipo: 'arroz',
         marca: 'zanatta',
         description: 'Arroz branco',
         pesoKG: 1,
-        preco: 3.49
+        preco: 3.49,
+        estado: null,
+        classificacao: 'branco',
+        img: null
     },
     {
-        tipo: 'Arroz',
-        marca: 'Camil',
-        description: 'Arroz parbolizado',
+        tipo: 'arroz',
+        marca: 'camil',
+        description: 'Arroz parboilizado',
         pesoKG: 1,
-        preco: 4.49
+        preco: 4.49,
+        estado: null,
+        classificacao: 'parboilizado',
+        img: null
     },
     {
-        tipo: 'Acucar',
+        tipo: 'acucar',
         marca: 'itaja',
         description: 'Açucar cristal',
         pesoKG: 1,
-        preco: 3.99
+        preco: 3.99,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Acucar',
+        tipo: 'acucar',
         marca: 'aster',
         description: 'Açucar demerara',
         pesoKG: 1,
-        preco: 6.49
+        preco: 6.49,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Acucar',
-        marca: 'Karaja',
+        tipo: 'acucar',
+        marca: 'karaja',
         description: 'Açucar cristal',
         pesoKG: 1,
-        preco: 3.99
+        preco: 3.99,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Oleo',
+        tipo: 'oleo',
         marca: 'soya',
         description: 'Oleo de soja soya',
         volumeML: 900,
-        preco: 8.19
+        preco: 8.19,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Margarina',
+        tipo: 'margarina',
         marca: 'primor',
         description: 'Margarina com sal',
         pesoKG: 1,
-        preco: 13.49
+        preco: 13.49,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Margarina',
+        tipo: 'margarina',
         marca: 'primor',
         description: 'Margarina com sal',
         pesoG: 250,
-        preco: 3.75
+        preco: 3.75,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Margarina',
-        marca: 'Puro_Sabor',
+        tipo: 'margarina',
+        marca: 'puro sabor',
         description: 'Margarina com sal',
         pesoG: 500,
-        preco: 6.69
+        preco: 6.69,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Margarina',
-        marca: 'Puro_Sabor',
+        tipo: 'margarina',
+        marca: 'puro sabor',
         description: 'Margarina com sal',
         pesoG: 250,
-        preco: 3.49
+        preco: 3.49,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Margarina',
-        marca: 'Puro_Sabor',
+        tipo: 'margarina',
+        marca: 'puro sabor',
         description: 'Margarina com sal',
         pesoKG: 3,
-        preco: 40.99
+        preco: 40.99,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Frutas',
+        tipo: 'frutas',
         fruta: 'banana',
         description: 'Banana Prata',
         pesoKG: 1,
-        preco: 1.99
+        preco: 1.99,
+        estado: null,
+        classificacao: 'prata',
+        img: null
     },
     {
-        tipo: 'Pao',
-        marca: 'Max_paes',
+        tipo: 'pao',
+        marca: 'max paes',
         description: 'Pao bola',
-        preco: 6.79
+        preco: 6.79,
+        estado: null,
+        classificacao: 'pao bola',
+        img: null
     },
     {
-        tipo: 'Pao',
-        marca: 'Shopping_paes',
+        tipo: 'pao',
+        marca: 'shopping paes',
         description: 'Pao bola',
-        preco: 6.25
+        preco: 6.25,
+        estado: null,
+        classificacao: 'pao bola',
+        img: null
     },
     {
-        tipo: 'Legumes',
-        legume: 'Batata',
+        tipo: 'legumes',
+        legume: 'batata',
         description: 'Batata inglesa',
         pesoKG: 1,
-        preco: 5.99
+        preco: 5.99,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Frutas',
-        fruta: 'Tomate',
+        tipo: 'frutas',
+        fruta: 'tomate',
         description: 'Tomate comum',
         pesoKG: 1,
-        preco: 3.49
+        preco: 3.49,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Farinha',
+        tipo: 'farinha',
         marca:'cearense',
         description: 'Farinha de mandioca amarela',
         pesoKG: 1,
-        preco: 4.59
+        preco: 4.59,
+        estado: null,
+        classificacao: 'amarela',
+        img: null
     }
 ]
 

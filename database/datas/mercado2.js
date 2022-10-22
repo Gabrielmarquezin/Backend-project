@@ -1,176 +1,268 @@
 //Sao Francisco
 const dataFrancisco = [
     {
-        tipo: 'Frutas',
-        fruta: 'Tomate',
+        tipo: 'frutas',
+        fruta: 'tomate',
         pesoKG: 1,
-        preco: 4
+        preco: 4,
+        estado: null,
+        classificacao: 'normal',
+        description: 'Tomate 1kg',
+        img: null
     },
     {
-        tipo: 'Legumes',
-        legume: 'Batata',
+        tipo: 'legumes',
+        legume: 'batata',
         pesoKG: 1,
-        preco: 6
+        preco: 6,
+        estado: null,
+        classificacao: 'normal',
+        description: 'Batata inglesa',
+        img: null
     },
     {
-        tipo: 'Margarina',
-        marca: 'Puro sabor',
+        tipo: 'margarina',
+        marca: 'puro sabor',
         pesoKG: 1,
-        preco: 14
+        preco: 14,
+        estado: null,
+        classificacao: 'normal',
+        description: 'Margarina Puro Sabor 1kg',
+        img: null
     },
     {
-        tipo: 'Margarina',
-        marca: 'Puro sabor',
+        tipo: 'margarina',
+        marca: 'puro sabor',
         pesoG: 500,
-        preco: 7
+        preco: 7,
+        estado: null,
+        classificacao: 'normal',
+        description: 'Margarina Puro Sabor 500g',
+        img: null
     },
     {
-        tipo: 'Margarina',
-        marca: 'Puro sabor',
+        tipo: 'margarina',
+        marca: 'puro sabor',
         pesoG: 250,
-        preco: 3.5
+        preco: 3.5,
+        estado: null,
+        classificacao: 'normal',
+        description: 'Margarina Puro Sabor 250g',
+        img: null
     },
     {
-        tipo: 'Margarina',
-        marca: 'Qualy',
+        tipo: 'margarina',
+        marca: 'qualy',
         pesoKG: 1,
-        preco: 20
+        preco: 20,
+        estado: null,
+        classificacao: 'normal',
+        description: 'Margarina Qualy 1kg',
+        img: null
     },
     {
-        tipo: 'Oleo',
+        tipo: 'oleo',
         marca: 'soya',
         description: 'Oleo de soja soya',
-        preco: 9
+        preco: 9,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Oleo',
+        tipo: 'oleo',
         marca: 'siol',
         description: 'Oleo de soja siol',
-        preco: 6.5
+        preco: 6.5,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Acucar',
+        tipo: 'acucar',
         marca: 'payol',
         pesoKG: 1,
-        preco: 3.8
+        preco: 3.8,
+        estado: null,
+        classificacao: 'normal',
+        description: 'Açúcar cristal payol',
+        img: null
     },
     {
-        tipo: 'Macarrao',
-        marca: 'Richester',
+        tipo: 'macarrao',
+        marca: 'richester',
         description: 'Macarrao espaguete',
         pesoG: 500,
-        preco: 5.5
+        preco: 5.5,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Macarrao',
+        tipo: 'macarrao',
         marca: 'estrela',
         description: 'Macarrao espaguete',
         pesoG: 500,
-        preco: 3.9
+        preco: 3.9,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Arroz',
-        marca: 'Pai_Joao',
+        tipo: 'arroz',
+        marca: 'pai joao',
         pesoKG: 1,
-        preco: 4.5
+        preco: 4.5,
+        estado: null,
+        classificacao: 'branco',
+        description: 'Arroz Branco Pai Joao 1kg',
+        img: null
     },
     {
-        tipo: 'Arroz',
+        tipo: 'arroz',
         marca: 'namorado',
         pesoKG: 1,
-        preco: 4.5
+        preco: 4.5,
+        estado: null,
+        classificacao: 'branco',
+        description: 'Arroz Branco Namorado 1kg',
+        img: null
     },
     {
-        tipo: 'Arroz',
-        marca: 'panelaço',
+        tipo: 'arroz',
+        marca: 'panelaco',
         pesoKG: 1,
-        preco: 4
+        preco: 4,
+        estado: null,
+        classificacao: 'branco',
+        description: 'Arroz Branco Panelaço 1kg',
+        img: null
     },
     {
-        tipo: 'Pao',
-        description: 'Pao bola',
-        preco: 7
+        tipo: 'pao',
+        description: 'pao bola',
+        preco: 7,
+        estado: null,
+        classificacao: 'pao bola',
+        img: null
     },
     {
-        tipo: 'Farinha',
-        marca: 'Ponto_do_Feijao',
+        tipo: 'farinha',
+        marca: 'ponto do feijao',
         description: 'Farinha amarela',
         pesoKG: 1,
-        preco: 5.5
+        preco: 5.5,
+        estado: null,
+        classificacao: 'amarela',
+        img: null
     },
     {
-        tipo: 'Farinha',
-        marca: 'Ponto_do_Feijao',
+        tipo: 'farinha',
+        marca: 'ponto do feijao',
         description: 'Farinha branca',
         pesoKG: 1,
-        preco: 5.5
+        preco: 5.5,
+        estado: null,
+        classificacao: 'branco',
+        img: null
     },
     {
-        tipo: 'Feijao',
+        tipo: 'feijao',
         description: 'Feijao TL',
         pesoKG: 1,
-        preco: 7.5
+        preco: 7.5,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
-        tipo: 'Leite',
-        marca: 'Betania',
+        tipo: 'leite',
+        marca: 'betania',
         description: 'Leite integral',
         volumeL: 1,
-        preco: 7
+        preco: 7,
+        estado: 'liquido',
+        classificacao: 'integral',
+        img: null
     },
     {
-        tipo: 'Leite',
-        marca: 'Betania',
+        tipo: 'leite',
+        marca: 'betania',
         description: 'Leite zero lactose',
         volumeL: 1,
-        preco: 8
+        preco: 8,
+        estado: 'liquido',
+        classificacao: 'sem lactose',
+        img: null
     },
     {
-        tipo: 'Leite',
-        marca: 'Betania',
+        tipo: 'leite',
+        marca: 'betania',
         description: 'Leite desnatado',
         volumeL: 1,
-        preco: 7
+        preco: 7,
+        estado: 'liquido',
+        classificacao: 'desnatado',
+        img: null
     },
     {
-        tipo: 'Leite',
-        marca: 'Ninho',
+        tipo: 'leite',
+        marca: 'ninho',
         description: 'Leite integral',
         volumeL: 1,
-        preco: 12.8
+        preco: 12.8,
+        estado: 'liquido',
+        classificacao: 'integral',
+        img: null
     },
     {
-        tipo: 'Leite',
-        marca: 'Itambe',
+        tipo: 'leite',
+        marca: 'itambe',
         description: 'Leite em po integral',
         pesoG: 200,
-        preco: 8
+        preco: 8,
+        estado: 'po',
+        classificacao: 'integral',
+        img: null
     },
     {
-        tipo: 'Leite',
-        marca: 'Betania',
+        tipo: 'leite',
+        marca: 'betania',
         description: 'Leite em po integral',
         pesoG: 200,
-        preco: 7.5
+        preco: 7.5,
+        estado: 'po',
+        classificacao: 'integral',
+        img: null
     },
     {
-        tipo: 'Leite',
-        marca: 'Betania',
+        tipo: 'leite',
+        marca: 'betania',
         description: 'Leite em po integral',
         pesoKG: 1,
-        preco: 30
+        preco: 30,
+        estado: 'po',
+        classificacao: 'integral',
+        img: null
     },
     {
         tipo: 'cafe',
-        marca: 'Nescafe',
+        marca: 'nescafe',
         description: 'Nescafe extraforte',
         pesoG: 40,
-        preco: 5
+        preco: 5,
+        estado: null,
+        classificacao: 'normal',
+        img: null
     },
     {
         tipo: 'cafe',
-        marca: 'Santa_Clara',
-        preco: 8
+        marca: 'santa clara',
+        preco: 8,
+        estado: null,
+        classificacao: 'normal',
+        description: 'Cafe Santa Clara comum',
+        img: null
     }
 ]
 

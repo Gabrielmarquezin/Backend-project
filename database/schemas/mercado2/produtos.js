@@ -5,7 +5,7 @@ const batch = db.batch()
 
 async function setDoc(){
     dataFranciso.forEach(element =>{
-        const refDoc = db.collection('Francisco').doc()
+        const refDoc = db.collection('francisco').doc()
         batch.set(refDoc, element)
     })
 

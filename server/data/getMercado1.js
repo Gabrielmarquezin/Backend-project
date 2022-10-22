@@ -1,6 +1,13 @@
+const db = require('../infra/conection.js')
 const bd = require('../infra/conection.js')
 
 class Produtos{
+
+   setTipo(type, collection, tamanho){
+      this.tipo = type
+      this.collection = collection
+      this.tamanho = tamanho
+   }
 
    async getAll(){
       try {
@@ -46,13 +53,21 @@ class Produtos{
       }
    }
 
-   setTipo(type, collection, tamanho){
-      this.tipo = type
-      this.collection = collection
-      this.tamanho = tamanho
+   async getCategorias(){
+      try {
+         const arrCategorias = []
+         const categorias = await db.collection('categorias').orderBy('id').get()
+         categorias.forEach(cat =>{
+            arrCategorias.push(cat.data())
+         })
+            
+         return arrCategorias
+      } catch (error) {
+         return error
+      }
    }
    
-   
+
 }
 
 const produtos = new Produtos()

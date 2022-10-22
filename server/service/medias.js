@@ -1,5 +1,5 @@
 const produtos = require('../data/getMercado1.js')
-const cesta = ['Arroz', 'Feijao', 'Oleo', 'Margarina', 'Macarrao', 'Farinha', 'Leite', 'Cuscuz', 'Sardinha', 'Acucar', 'Bolacha', 'Sal', 'Polpa', 'Cafe']
+const cesta = ['arroz', 'feijao', 'oleo', 'margarina', 'macarrao', 'farinha', 'leite', 'cuscuz', 'sardinha', 'acucar', 'bolacha', 'sal', 'polpa', 'cafe']
 
 const Media = {
 
@@ -27,8 +27,8 @@ const Media = {
     media: async ()=>{
         const setCollection = getMedia(1)
         const biga = await setCollection('biga')
-        const Francisco = await setCollection('Francisco')
-        const Deirton = await setCollection('Deirton')
+        const Francisco = await setCollection('francisco')
+        const Deirton = await setCollection('deirton')
         
         const dataArr = [biga.NotFound, Deirton.NotFound, Francisco.NotFound]
         const arr = []
