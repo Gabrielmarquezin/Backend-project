@@ -25,6 +25,10 @@ app.get('/', (req, res)=>{
     
 })
 
+app.get('/pages/criar', (req, res)=>{
+    res.render('formulario/criar')
+})
+
 
 app.listen(port, ()=>{
     console.log('rodando no link: https://ceara-cientifico.herokuapp.com/')

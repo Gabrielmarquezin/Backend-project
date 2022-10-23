@@ -1,0 +1,12 @@
+@media (max-width: 1300px){
+    .conteiner{
+        width: 450px;
+    }
+}
+
+@media (max-width: 600px){
+    .conteiner{
+        width: 95vw;
+    }
+}
+

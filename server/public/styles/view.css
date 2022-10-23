@@ -1,5 +1,17 @@
-@media (max-width: 1200px){
+@media (max-width: 900px){
+    #sugestao{
+        display: none;
+    }
+    .text{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media (max-width: 1300px){
     .menu{
-       height: 25vh;
+       height: 30%;
     }
 }
