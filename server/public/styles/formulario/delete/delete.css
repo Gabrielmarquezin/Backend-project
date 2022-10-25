@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00D264;
+    font-size: 16px;
+}
+
+.master{
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 45vh;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.front-form{
+    background-color: #F9F9F9;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    
+}
+
+.form-conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 35px;
+
+}
+
+.group-input{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.input-box{
+    position: relative;
+    height: 45px;
+}
+
+.input-box label{
+    font-family: 'Noto Sans', sans-serif;
+    opacity: 0.8;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+.input-box label{
+    position: absolute;
+    left: 3%;
+    top: calc(50% - 0.45rem);
+    transition: 0.1s ease-in;
+}
+
+.input-box input,
+.input-box select{
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    padding: 10px;
+    border: 1px solid #00D264;
+    background-color: #E6E6E6;
+}
+
+.input-box input:focus ~label,
+.input-box input:valid ~label{
+    transform: translateY(calc(-50% - 0.8rem));
+    background-color: #00D264;
+    font-size: 0.8rem;
+    opacity: 1;
+    color: white;
+    padding: 2px;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn button{
+    background-color: #00D264;
+    color: white;
+    padding: 8px;
+    border: none;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/formulario/delete/delete.css">
+    <link rel="stylesheet" href="../styles/formulario/delete/responsiv.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="master" id="master">
+        
+        <div class="front-form" id="front-form">
+            <form action="http://localhost:2000/ola" method="post" class="form-conteiner" id="form-conteiner">
+                <div class="group-input">
+                    <div class="input-box">
+                        <input type="text" name="marca" id="marca" required>
+                        <label for="marca">MARCA</label>
+                    </div>
+        
+                    <div class="input-box">
+                        <input type="text" name="tipo" id="tipo" required list="tipos">
+                        <label for="tipo">TIPO</label>
+                        <datalist id="tipos">
+                            <%categorias.forEach(tipo => {%>
+                                <option value='<%= tipo.cat %>'><%= tipo.cat%></option>
+                            <%})%>
+                        </datalist>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="text" name="classificacao" id="classificacao" required>
+                        <label for="classificacao">CLASSIFICAÇÃO</label>
+                    </div>
+        
+                    <div class="input-box">
+                        <input type="text" name="estado" id="estado" required>
+                        <label for="estado">ESTADO</label>
+                    </div>
+        
+                    <div class="input-box">
+                        <input type="number" name="tamanho" id="tamanho" required>
+                        <label for="tamanho">TAMANHO</label>
+                    </div>
+
+                    <div class="input-box">
+                        <select id="select-market" name="select-market">
+                            <option value="mercado">MERCADO</option>
+                            <option value="biga">biga</option>
+                            <option value="deirton">deirton</option>
+                            <option value="francisco">francisco</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button type="button" onclick="window.location.href ='https://ceara-cientifico.herokuapp.com'">VOLTAR</button>
+                    <button type="submit" id="btn">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

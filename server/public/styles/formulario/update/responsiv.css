@@ -1,0 +1,13 @@
+@media (max-width: 500px){
+    .master{
+        height: 81vh;
+        width: 90%;
+        overflow-y: auto;
+    }
+
+    .input-box,
+    .input-groups,
+    .input-desc{
+        width: 100%;
+    }
+}

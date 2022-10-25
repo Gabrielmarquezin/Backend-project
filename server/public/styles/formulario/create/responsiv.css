@@ -1,0 +1,37 @@
+@media (max-width: 1300px){
+    .conteiner{
+        width: 450px;
+    }
+
+    .input-group{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    body{
+        height: 90vh;
+    }
+    .conteiner{
+        width: 90%;
+        height: 80%;
+        overflow: hidden;
+        overflow-y: auto;
+        margin: 0 auto;
+    }
+
+    .form-index{
+        gap: 35px;
+    }
+    .input-group{
+        width: 100%;
+    }
+
+    .input-group input{
+        width: 100%;
+        padding: 20px;
+    }
+ 
+     
+}
+

@@ -5,6 +5,9 @@ const app = express()
 const Route = require('./route/routeBiga.js')
 const route = require('./route/routeMedia.js')
 const RouteCat = require('./route/categorias.js')
+
+const tipo = require('./data/getCategoria.js')
+
 const port = process.env.PORT || 2000
 
 app.use(express.json())
@@ -25,10 +28,28 @@ app.get('/', (req, res)=>{
     
 })
 
-app.get('/pages/criar', (req, res)=>{
-    res.render('formulario/criar')
+app.get('/pages/criar', async(req, res)=>{
+    tipo.setCat('categorias')
+    const tipos = await tipo.getCat()
+    res.render('formulario/criar', {categorias: tipos})
 })
 
+app.get('/pages/atualizar', async(req, res)=>{
+    tipo.setCat('categorias')
+    const tipos = await tipo.getCat()
+    res.render('formulario/update', {categorias: tipos})
+})
+
+app.get('/pages/deletar', async(req, res)=>{
+    tipo.setCat('categorias')
+    const tipos = await tipo.getCat()
+    res.render('formulario/excluir', {categorias: tipos})
+})
+
+
+app.post('/ola', (req, res)=>{
+    
+})
 
 app.listen(port, ()=>{
     console.log('rodando no link: https://ceara-cientifico.herokuapp.com/')

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/formulario/update/update.css">
+    <link rel="stylesheet" href="../styles/formulario/update/responsiv.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="master" id="master">
+        
+        <div class="front-form" id="front-form">
+            <form action="http://localhost:2000/ola" method="post" class="form-conteiner" id="form-conteiner">
+                <div class="group-input">
+                    <div class="input-box">
+                        <input type="text" name="marca" id="marca" required>
+                        <label for="marca">MARCA</label>
+                    </div>
+        
+                    <div class="input-box">
+                        <input type="text" name="tipo" id="tipo" required list="tipos">
+                        <label for="tipo">TIPO</label>
+                        <datalist id="tipos">
+                            <%categorias.forEach(tipo => {%>
+                                <option value='<%= tipo.cat %>'><%= tipo.cat%></option>
+                            <%})%>
+                        </datalist>
+                    </div>
+                    
+                    <div class="input-box">
+                        <input type="text" name="classificacao" id="classificacao" required>
+                        <label for="classificacao">CLASSIFICAÇÃO</label>
+                    </div>
+        
+                    <div class="input-box">
+                        <input type="text" name="estado" id="estado" required>
+                        <label for="estado">ESTADO</label>
+                    </div>
+        
+                    <div class="input-box">
+                        <input type="number" name="tamanho" id="tamanho" required>
+                        <label for="tamanho">TAMANHO</label>
+                    </div>
+
+                    <div class="input-box">
+                        <select id="select-market" name="select-market">
+                            <option value="mercado">MERCADO</option>
+                            <option value="biga">biga</option>
+                            <option value="deirton">deirton</option>
+                            <option value="francisco">francisco</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button type="button" onclick="window.location.href ='https://ceara-cientifico.herokuapp.com'">VOLTAR</button>
+                    <button type="submit" id="btn">PROXIMO</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="back-form back-form-none" id="back-form">
+            <form action="" class="form">
+                <div class="form-index">
+                    <div class="input-groups">
+                        <input type="text" name="tipo" id="tipo" list="tipos" required>
+                        <label for="tipo">TIPO</label>
+                        <datalist id="tipos">
+                            <%categorias.forEach(tipo => {%>
+                                <option value='<%= tipo.cat %>'><%= tipo.cat%></option>
+                            <%})%>
+                        </datalist>
+                    </div>
+        
+                    <div class="input-groups">
+                        <input type="text" name="marca" id="marca" required>
+                        <label for="marca">MARCA</span>
+                    </div>
+        
+                    <div class="input-groups">
+                        <input type="text" name="estado" id="estado" required>
+                        <label for="estado">ESTADO</label>
+                    </div>
+        
+                    <div class="input-groups">
+                        <input type="text" name="classificacao" id="classificacao" required>
+                        <label for="classificacao">CLASSIFICAÇÃO</label>
+                    </div>
+        
+                    <div class="input-groups">
+                        <input type="text" name="mercado" id="mercado" required>
+                        <label for="mercado">MERCADO</label>
+                    </div>
+        
+                    <div class="input-groups">
+                        <input type="number" name="tamanho" id="tamanho" required>
+                        <label for="tamanho">TAMANHO</label>
+                    </div>
+        
+                    <div class="input-desc">
+                        <label for="descricao">DESCRIÇÃO</label>
+                        <textarea name="descricao" id="descricao" rows="4"></textarea>
+                    </div>
+    
+                    <div class="input-groups market">
+                        <select id="select-market" name="select-market">
+                            <option value="mercado">MERCADO</option>
+                            <option value="biga">biga</option>
+                            <option value="deirton">deirton</option>
+                            <option value="francisco">francisco</option>
+                        </select>
+                    </div>
+    
+                    <div class="img">
+                        <span>IMAGEM</span>
+                        <label for="img"><span class="imagem-select" id="img-select"></span></label>
+                        <input type="file" name="img" id="img" placeholder="Esolha uma imagem">
+                    </div> 
+
+                </div>
+
+                <div class="button">
+                    <button type="button" id="voltar">VOLTAR</button>
+                    <button type="submit" id="enviar">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../src/formulario/flip.js"></script>
+    <script src="../src/formulario/fileRead.js"></script>
+</body>
+</html>

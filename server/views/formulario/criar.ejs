@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/add.css">
-    <link rel="stylesheet" href="../styles/formulario/responsiv.css">
+    <link rel="stylesheet" href="../styles/formulario/create/add.css">
+    <link rel="stylesheet" href="../styles/formulario/create/responsiv.css">
     <title>criar</title>
 </head>
 <body>
@@ -13,32 +13,37 @@
         <form action="" class="form">
             <div class="form-index">
                 <div class="input-group">
-                    <input type="text" name="tipo" id="tipo">
+                    <input type="text" name="tipo" id="tipo" list="tipos" required>
                     <label for="tipo">TIPO</label>
+                    <datalist id="tipos">
+                        <%categorias.forEach(tipo => {%>
+                            <option value='<%= tipo.cat %>'><%= tipo.cat%></option>
+                        <%})%>
+                    </datalist>
                 </div>
     
                 <div class="input-group">
-                    <input type="text" name="marca" id="marca">
-                    <label for="marca">MARCA</label>
+                    <input type="text" name="marca" id="marca" required>
+                    <label for="marca">MARCA</span>
                 </div>
     
                 <div class="input-group">
-                    <input type="text" name="estado" id="estado">
+                    <input type="text" name="estado" id="estado" required>
                     <label for="estado">ESTADO</label>
                 </div>
     
                 <div class="input-group">
-                    <input type="text" name="classificacao" id="classificacao">
+                    <input type="text" name="classificacao" id="classificacao" required>
                     <label for="classificacao">CLASSIFICAÇÃO</label>
                 </div>
     
                 <div class="input-group">
-                    <input type="number" name="preco" id="preco">
+                    <input type="number" name="preco" id="preco" required>
                     <label for="preco">PREÇO</label>
                 </div>
     
                 <div class="input-group">
-                    <input type="number" name="tamanho" id="tamanho">
+                    <input type="number" name="tamanho" id="tamanho" required>
                     <label for="tamanho">TAMANHO</label>
                 </div>
     
@@ -47,7 +52,7 @@
                     <textarea name="descricao" id="descricao" rows="5"></textarea>
                 </div>
 
-                <div class="input-group market">
+                <div class="market">
                     <select id="select-market" name="select-market">
                         <option value="mercado">MERCADO</option>
                         <option value="biga">biga</option>
@@ -57,16 +62,18 @@
                 </div>
 
                 <div class="img">
-                    <label for="img">IMAGEM</label>
+                    <span>IMAGEM</span>
+                    <label for="img"><span class="img-select" id="img-span"></span></label>
                     <input type="file" name="img" id="img" placeholder="Esolha uma imagem">
                 </div> 
 
                 <div class="button">
+                    <button type="button" onclick="window.location.href ='https://ceara-cientifico.herokuapp.com'">VOLTAR</button>
                     <button type="submit" id="enviar">ENVIAR</button>
                 </div>
             </div>
         </form>
-        
     </div>
+    <script src="../src/formulario/createFile.js"></script>
 </body>
 </html>
