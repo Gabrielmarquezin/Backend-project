@@ -24,7 +24,7 @@ class Check{
     }
 
     async EmptyProduto(){
-        const ref = db.collection(this.collection).where('marca','==', this.obj.marca).where('tipo', '==', this.obj.tipo)
+        const ref = db.collection(this.collection).where('marca','==', this.obj.marca || this.obj.market).where('tipo', '==', this.obj.tipo)
         const classificacao = this.obj.classificacao
         const estado = this.obj.estado
         const tamanho = this.obj.tamanho 
