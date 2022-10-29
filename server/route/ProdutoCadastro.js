@@ -84,7 +84,8 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
     
             const dataUpdate = Checked.setUpdate(obj, obj.idDoc, obj.mercado)
             const update = await Checked.Update()
-    
+            
+            console.log(obj)
             res.render('formulario/update', {categorias: tipos, idDoc: false, empty: 'atualizado', mercado: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
         }
         
