@@ -4,6 +4,7 @@ const produtos = require('../data/getMercado1.js')
 const Checked = require('../data/emptyProdutos.js')
 const tipo = require('../data/getCategoria.js')
 const { response } = require('express')
+const atributos = require('../data/getAtributs.js')
 
 RoutePost.post('/pages/atualizar', async (req, res)=>{
     try {
@@ -91,7 +92,7 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
 RoutePost.post('/pages/criar', async(req, res)=>{
     try {    
         const obj = req.body
-        
+
         const atributs = await atributos.getAtributos()
     
         if(req.body.tipo == 'nenhum'){
