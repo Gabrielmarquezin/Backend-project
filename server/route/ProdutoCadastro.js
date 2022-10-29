@@ -45,7 +45,7 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
         }
     
         if(req.body.tamanho !== 'nenhum'){
-            obj.tamanho = req.body.tamanho
+            obj.tamanho = parseFloat(req.body.tamanho)
         }
     
         if(req.body.descricao !== 'nenhum'){
