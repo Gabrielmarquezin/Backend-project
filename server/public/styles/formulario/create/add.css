@@ -148,3 +148,6 @@ body{
     object-fit: cover;
 }
 
+button[type="submit"]:disabled  {
+    background: #dddddd;
+}

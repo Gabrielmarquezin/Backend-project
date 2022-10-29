@@ -5,8 +5,11 @@ const app = express()
 const Route = require('./route/routeBiga.js')
 const route = require('./route/routeMedia.js')
 const RouteCat = require('./route/categorias.js')
+const RoutePost = require('./route/ProdutoCadastro.js')
 
+const atributos = require('./data/getAtributs.js')
 const tipo = require('./data/getCategoria.js')
+const { get } = require('http')
 
 const port = process.env.PORT || 2000
 
@@ -22,6 +25,7 @@ app.set('views', path.join(__dirname, "views"))
 app.use('/', Route)
 app.use('/', route)
 app.use('/', RouteCat)
+app.use('/', RoutePost)
 
 app.get('/', (req, res)=>{
     res.render('index')
@@ -31,36 +35,28 @@ app.get('/', (req, res)=>{
 app.get('/pages/criar', async(req, res)=>{
     tipo.setCat('categorias')
     const tipos = await tipo.getCat()
-    res.render('formulario/criar', {categorias: tipos})
+    const atributs = await atributos.getAtributos()
+
+    res.render('formulario/criar', {categorias: tipos, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
 })
 
 app.get('/pages/atualizar', async(req, res)=>{
     tipo.setCat('categorias')
     const tipos = await tipo.getCat()
-    res.render('formulario/update', {categorias: tipos})
+    const atributs = await atributos.getAtributos()
+
+    res.render('formulario/update', {categorias: tipos, mercado: false, idDoc: false, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
 })
 
 app.get('/pages/deletar', async(req, res)=>{
     tipo.setCat('categorias')
     const tipos = await tipo.getCat()
-    res.render('formulario/excluir', {categorias: tipos})
-})
+    const atributs = await atributos.getAtributos()
 
-
-app.post('/ola', (req, res)=>{
-    
+    res.render('formulario/excluir', {categorias: tipos, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
 })
 
 app.listen(port, ()=>{
     console.log('rodando no link: https://ceara-cientifico.herokuapp.com/')
 })
 
-
-/*
-const mercado = req.params.mercado
-    const tipo = req.query['tipo']
-    produtos.setTipo(tipo, mercado)
-    produtos.getProduct().then(a =>{
-        res.send(a)
-    })
-*/

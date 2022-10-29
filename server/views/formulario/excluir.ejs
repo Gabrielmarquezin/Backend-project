@@ -12,7 +12,7 @@
     <div class="master" id="master">
         
         <div class="front-form" id="front-form">
-            <form action="http://localhost:2000/ola" method="post" class="form-conteiner" id="form-conteiner">
+            <form action=" https://ceara-cientifico.herokuapp.com/pages/deletar" method="post" class="form-conteiner" id="form-conteiner">
                 <div class="group-input">
                     <div class="input-box">
                         <input type="text" name="marca" id="marca" required>
@@ -30,13 +30,23 @@
                     </div>
                     
                     <div class="input-box">
-                        <input type="text" name="classificacao" id="classificacao" required>
+                        <input type="text" name="classificacao" id="classificacao" list="class" required>
                         <label for="classificacao">CLASSIFICAÇÃO</label>
+                        <datalist id="class">
+                            <%classificacoes.forEach(clas => {%>
+                                <option value='<%= clas%>'><%= clas%></option>
+                            <%})%>
+                        </datalist>
                     </div>
         
                     <div class="input-box">
-                        <input type="text" name="estado" id="estado" required>
+                        <input type="text" name="estado" id="estado" list="estad" required>
                         <label for="estado">ESTADO</label>
+                        <datalist id="estad">
+                            <%estados.forEach(estado => {%>
+                                <option value='<%= estado %>'><%= estado%></option>
+                            <%})%>
+                        </datalist>
                     </div>
         
                     <div class="input-box">
@@ -45,7 +55,7 @@
                     </div>
 
                     <div class="input-box">
-                        <select id="select-market" name="select-market">
+                        <select id="select-market" name="market">
                             <option value="mercado">MERCADO</option>
                             <option value="biga">biga</option>
                             <option value="deirton">deirton</option>
@@ -59,6 +69,10 @@
                 </div>
             </form>
         </div>
+
+        <div class="validation-delete" id="validation" style="display: none;"><%= empty %></div>
     </div>
+    
+    <script type="module" src="../src/formulario/delete/delete.js"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="conteiner">
-        <form action="" class="form">
+        <form action=" https://ceara-cientifico.herokuapp.com/criar" method="post" class="form" >
             <div class="form-index">
                 <div class="input-group">
                     <input type="text" name="tipo" id="tipo" list="tipos" required>
@@ -28,13 +28,23 @@
                 </div>
     
                 <div class="input-group">
-                    <input type="text" name="estado" id="estado" required>
+                    <input type="text" name="estado" id="estado" list="estad" required>
                     <label for="estado">ESTADO</label>
+                    <datalist id="estad">
+                        <%estados.forEach(estado => {%>
+                            <option value='<%= estado %>'><%= estado%></option>
+                        <%})%>
+                    </datalist>
                 </div>
     
                 <div class="input-group">
-                    <input type="text" name="classificacao" id="classificacao" required>
+                    <input type="text" name="classificacao" id="classificacao" list="class" required>
                     <label for="classificacao">CLASSIFICAÇÃO</label>
+                    <datalist id="class">
+                        <%classificacoes.forEach(clas => {%>
+                            <option value='<%= clas%>'><%= clas%></option>
+                        <%})%>
+                    </datalist>
                 </div>
     
                 <div class="input-group">
@@ -53,7 +63,7 @@
                 </div>
 
                 <div class="market">
-                    <select id="select-market" name="select-market">
+                    <select id="select-market" name="market">
                         <option value="mercado">MERCADO</option>
                         <option value="biga">biga</option>
                         <option value="deirton">deirton</option>
@@ -65,6 +75,7 @@
                     <span>IMAGEM</span>
                     <label for="img"><span class="img-select" id="img-span"></span></label>
                     <input type="file" name="img" id="img" placeholder="Esolha uma imagem">
+                    <input type="url" name="img" style="display: none;" id="url">
                 </div> 
 
                 <div class="button">
@@ -73,7 +84,11 @@
                 </div>
             </div>
         </form>
+
+        <div class="validation" id="validation" style="display: none;"><%= empty %></div>
+
     </div>
-    <script src="../src/formulario/createFile.js"></script>
+    <script type="module" src="../src/stored/config.js"></script>
+    <script type="module" src="../src/formulario/createFile.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+const condition = document.getElementById('condition').innerText
+console.log(condition)
+
 const btn = document.getElementById('btn')
 const voltar = document.getElementById('voltar')
 
@@ -8,12 +11,18 @@ const master = document.getElementById('master')
 
 const Windowlargura = window.innerWidth
 
-btn.addEventListener('click', (e)=>{
-    e.preventDefault()
-    backForm.classList.toggle('back-form-none')
-    FlipForm()
-    heightMaster()
-})
+if(condition == 'exist'){
+       
+        backForm.classList.toggle('back-form-none')
+        FlipForm()
+        heightMaster()
+
+}else if(condition == 'DontExist'){
+    alert('DOCUMENTO NAO ENCONTRADO, COLOQUE VALORES VALIDOS')
+
+}else if(condition == 'atualizado'){
+    alert('DOCUMENTO ATUALIZADO')
+}
 
 voltar.addEventListener('click', (e)=>{
     backForm.classList.toggle('back-form-none')
