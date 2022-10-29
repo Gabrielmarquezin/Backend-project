@@ -15,8 +15,8 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
     
         const obj = {}
         const objVerification = {
-            tipo: req.body.tipof.toLowerCase(),
-            marca: req.body.marcaf.toLowerCase(),
+            tipo: req.body.tipof,
+            marca: req.body.marcaf,
             estado: req.body.estadof,
             tamanho: parseInt(req.body.tamanhof),
             classificacao: req.body.classificacaof,
@@ -29,11 +29,11 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
         
     
         if(req.body.tipo !== 'nenhum'){
-            obj.tipo =  req.body.tipo.toLowerCase()
+            obj.tipo =  req.body.tipo
         }
     
         if(req.body.marca !== 'nenhum'){
-            obj.marca = req.body.marca.toLowerCase()
+            obj.marca = req.body.marca
         }
     
         if(req.body.estado !== 'nenhum'){
