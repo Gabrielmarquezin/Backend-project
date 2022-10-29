@@ -30,6 +30,8 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
     
         if(req.body.tipo !== 'nenhum'){
             obj.tipo =  req.body.tipo
+        }else{
+            obj.tipo = null
         }
     
         if(req.body.marca !== 'nenhum'){
@@ -38,6 +40,8 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
     
         if(req.body.estado !== 'nenhum'){
             obj.estado = req.body.estado
+        }else{
+            obj.estado = null
         }
     
         if(req.body.classificacao !== 'nenhum'){
@@ -46,6 +50,8 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
     
         if(req.body.tamanho !== 'nenhum'){
             obj.tamanho = parseFloat(req.body.tamanho)
+        }else{
+            obj.tamanho = null
         }
     
         if(req.body.descricao !== 'nenhum'){
