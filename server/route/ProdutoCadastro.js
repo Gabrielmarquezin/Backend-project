@@ -50,8 +50,8 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
     
         if(req.body.tamanho !== 0){
             obj.tamanho = parseFloat(req.body.tamanho)
-            
-        }else if(req.body.tamanho == '0'){
+
+        }else if(req.body.tamanho == 0){
             obj.tamanho = null
         }
     
