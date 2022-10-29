@@ -52,7 +52,7 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
             obj.descricao = req.body.descricao
         }
     
-        if(req.body.img !== 'nenhum'){
+        if(req.body.img !== ''){
             obj.img = req.body.img
         }
         
@@ -159,6 +159,10 @@ RoutePost.post('/pages/deletar', async (req, res)=>{
     
         if(objDelete.classificacao == 'nenhum'){
             objDelete.classificacao == null
+        }
+
+        if(objDelete.tamanho == 0){
+            objDelete.tamanho = null
         }
     
         parseFloat(objDelete.tamanho)

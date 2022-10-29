@@ -75,7 +75,7 @@ body{
 .input-group input:focus ~label,
 .input-group input:valid ~label{
    transform: translateY(calc(-90% - 0.5rem));
-   font-size: 0.8rem;
+   font-size: 0.6rem;
    background-color: #00D264;
    left: 5%;
    opacity: 1;

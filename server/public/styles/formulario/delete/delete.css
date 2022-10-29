@@ -80,7 +80,7 @@ body{
 .input-box input:valid ~label{
     transform: translateY(calc(-50% - 0.8rem));
     background-color: #00D264;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     opacity: 1;
     color: white;
     padding: 2px;

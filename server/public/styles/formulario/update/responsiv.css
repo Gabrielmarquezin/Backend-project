@@ -9,5 +9,18 @@
     .input-groups,
     .input-desc{
         width: 100%;
+        height: 55px;
+    }
+
+    .input-box input:focus ~label,
+    .input-box input:valid ~label,
+    .input-groups input:focus ~label,
+    .input-groups input:valid ~label{
+        transform: translateY(calc(-50% - 1.2rem));
+        background-color: #00D264;
+        font-size: 0.6rem;
+        opacity: 1;
+        color: white;
+        padding: 2px;
     }
 }
