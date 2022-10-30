@@ -27,7 +27,7 @@ class Check{
         const ref = db.collection(this.collection).where('marca','==', this.obj.marca || this.obj.market).where('tipo', '==', this.obj.tipo)
         const classificacao = this.obj.classificacao
         const estado = this.obj.estado
-        const tamanho = this.obj.tamanho 
+        const tamanho = this.obj.tamanho || this.obj.pesoG || this.pesoKG
 
         try {
             const res = await db.runTransaction(async t => {
