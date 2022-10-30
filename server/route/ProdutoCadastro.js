@@ -16,6 +16,7 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
         const obj = {}
         const objVerification = {
             tipo: req.body.tipof,
+            marca: req.body.marcaf,
             estado: req.body.estadof,
             classificacao: req.body.classificacaof,
             next: req.body.next
@@ -37,10 +38,6 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
     
         if(req.body.tipo !== 'nenhum'){
             obj.tipo =  req.body.tipo
-        }
-
-        if(req.body.marcaf !== 'nenhum'){
-            objVerification.marca = req.body.marcaf
         }
     
         if(req.body.marca !== 'nenhum'){
