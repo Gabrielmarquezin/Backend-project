@@ -28,6 +28,10 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
             objVerification.estado = null
         }
 
+        if(objVerification.marcaf == 'nenhum'){
+            objVerification.marca = null
+        }
+
         if(tamanho < 1000 && tamanho !== 0){
             objVerification.pesoG = tamanho
 
