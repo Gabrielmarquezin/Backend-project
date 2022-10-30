@@ -18,13 +18,21 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
             tipo: req.body.tipof,
             marca: req.body.marcaf,
             estado: req.body.estadof,
-            tamanho: parseInt(req.body.tamanhof),
             classificacao: req.body.classificacaof,
             next: req.body.next
         }
+
+       const tamanho = parseInt(req.body.tamanhof)
     
         if(objVerification.estado == 'nenhum'){
             objVerification.estado = null
+        }
+
+        if(tamanho < 1000 && tamanho !== 0){
+            objVerification.pesoG = tamanho
+
+        }else if(tamanho >= 1000 && tamanho !==0){
+            objVerification.pesoKG = tamanho/1000
         }
         
     
@@ -72,6 +80,8 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
         if(objVerification.next == 'next'){
             Checked.setVerification(objVerification, req.body.marketf)
             const response = await Checked.EmptyProduto()
+
+           
     
             res.render('formulario/update', {categorias: tipos, idDoc: response.idDoc, empty: response.empty, mercado: req.body.marketf, classificacoes: atributs.classificacoes, estados: atributs.estados})
         }else{
