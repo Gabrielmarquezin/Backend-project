@@ -28,7 +28,7 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
             objVerification.estado = null
         }
 
-        if(objVerification.marcaf == 'nenhum'){
+        if(objVerification.marca == 'nenhum'){
             objVerification.marca = null
         }
 
