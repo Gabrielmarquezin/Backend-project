@@ -29,7 +29,7 @@ RoutePost.post('/pages/atualizar', async (req, res)=>{
         }
 
         if(objVerification.marca == 'nenhum'){
-            objVerification.marca = null
+            objVerification.marca = false
         }
 
         if(tamanho < 1000 && tamanho !== 0){
