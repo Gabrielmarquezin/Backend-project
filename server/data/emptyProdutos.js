@@ -37,7 +37,7 @@ class Check{
                 docs.forEach(doc => {
                     const docClassifi = doc.data().classificacao
                     const docEstado = doc.data().estado
-                    const docTamanho = doc.data().pesoG || doc.data().pesoKG || doc.data().tamanho || doc.data().volumeL || null
+                    const docTamanho = doc.data().pesoG || doc.data().pesoKG || doc.data().tamanho || doc.data().volumeL || doc.data().volumeML || null
 
                     if((classificacao == docClassifi) && (estado == docEstado) && (tamanho == docTamanho)){
                         idDoc = doc.id
