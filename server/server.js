@@ -57,6 +57,6 @@ app.get('/pages/deletar', async(req, res)=>{
 })
 
 app.listen(port, ()=>{
-    console.log('rodando no link: https://ceara-cientifico.herokuapp.com/')
+    console.log('rodando no link:https://backend-project-55nrfinxg-gabrielmarquezin.vercel.app')
 })
 
