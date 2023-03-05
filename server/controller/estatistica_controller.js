@@ -14,9 +14,9 @@ async function StatistiController(req, res){
         
         if(getProducts){
             const ProductsPrices = getProducts.map(product => product.preco)
-            const staticsData = CalStatistic(ProductsPrices)
+            const statisticData = CalStatistic(ProductsPrices)
             
-            const ProductsData = {staticsData, Products: getProducts}
+            const ProductsData = {statisticData, Products: getProducts}
             res.status(200).send(ProductsData)
         }
     } catch (error) {
