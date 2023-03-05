@@ -1,5 +1,7 @@
 
 function calStatistic(arrayModify){
+    console.log(arrayModify)
+    
     let Media = arrayModify.reduce((previusValue, currentValue) =>{
         return previusValue+currentValue/arrayModify.length
     }, 0)
