@@ -12,8 +12,8 @@ async function StatistiController(req, res){
         const getProducts = await produtos.getProduct()
 
         
-        if(dataProduct){
-            const ProductsPrices = dataProduct.map(product => product.preco)
+        if(getProducts){
+            const ProductsPrices = getProducts.map(product => product.preco)
             const staticsData = CalStatistic(ProductsPrices)
             
             const ProductsData = {staticsData, Products: getProducts}
