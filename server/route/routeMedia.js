@@ -22,8 +22,6 @@ route.get('/mercados/media', async (req, res)=>{
     } catch (error) {
         res.status(404).send({erro: error})
     }
-})
-
-
+}) 
 
 module.exports = route
