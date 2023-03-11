@@ -28,7 +28,7 @@ app.use('/', RouteCat)
 app.use('/', RoutePost)
 
 app.get('/', (req, res)=>{
-    res.render('index')
+    res.render('home')
     
 })
 
@@ -37,7 +37,7 @@ app.get('/pages/criar', async(req, res)=>{
     const tipos = await tipo.getCat()
     const atributs = await atributos.getAtributos()
 
-    res.render('formulario/criar', {categorias: tipos, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
+    res.render('formulario/Adicionar/add.ejs', {categorias: tipos, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
 })
 
 app.get('/pages/atualizar', async(req, res)=>{
@@ -45,7 +45,7 @@ app.get('/pages/atualizar', async(req, res)=>{
     const tipos = await tipo.getCat()
     const atributs = await atributos.getAtributos()
 
-    res.render('formulario/update', {categorias: tipos, mercado: false, idDoc: false, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
+    res.render('formulario/Atualizar/update.ejs', {categorias: tipos, mercado: false, idDoc: false, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
 })
 
 app.get('/pages/deletar', async(req, res)=>{
@@ -53,7 +53,7 @@ app.get('/pages/deletar', async(req, res)=>{
     const tipos = await tipo.getCat()
     const atributs = await atributos.getAtributos()
 
-    res.render('formulario/excluir', {categorias: tipos, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
+    res.render('formulario/Deletar/delete.ejs', {categorias: tipos, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
 })
 
 app.listen(port, ()=>{

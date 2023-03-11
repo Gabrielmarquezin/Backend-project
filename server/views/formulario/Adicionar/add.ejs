@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/6a6ae047b2.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6a6ae047b2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADICIONAR</title>
+    <link rel="stylesheet" href="../../styles/formulario/create/addE.css">
+</head>
+<body>
+    <div class="all">
+       <a href="http://localhost:2000"><i class="fa-solid fa-arrow-right"></i></a>
+        <div class="text">
+            <h1>ADICIONE OS DADOS</h1>
+        </div>
+        <div class="form">
+            <form method="POST" action="http://localhost:2000/pages/criar" id="form">
+                <label>TIPO</label><br>
+                <input type="text" name="TIPO"><br>
+                <label>MARCA</label><br>
+                <input type="text" name="MARCA"><br>
+                <label>PESO</label><br>
+                <input type="text" name="PESO"><br>
+                <label>CLASSIFICAÇÃO</label><br>
+                <input type="text" name="CLASSIFICAÇÃO"><br>
+                <label>ESTADO</label><br>
+                <input type="text" name="ESTADO"><br>
+                <label>PREÇO</label><br>
+                <input type="text" name="PREÇO"><br>
+                <label>SELECIONE O MERCADO</label><br>
+                <select>
+                    <option value="">NENHUM</option>
+                    <option value="">BIGA</option>
+                    <option value="">DEITON</option>
+                    <option value="">MERCADO SÃO FRANCISCO</option>
+                </select><br>
+                <br>
+                <div id="img">
+                    <label for="file" id="labelfile"><span>ESCOLHA UMA IMAGEM</span></label>
+                    <input type="file" id="file">
+                    <input type="url" name="url" id="url">
+                </div><br>
+                <center>
+                    <button id="btnSubmit">ADICIONAR</button>
+                </center>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="../../src/formulario/adicionar/script.js"></script>
+</body>
+</html> 

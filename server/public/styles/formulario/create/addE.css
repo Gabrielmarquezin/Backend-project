@@ -1,0 +1,118 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap');
+
+
+body{
+    position: relative;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+.all{
+    background-color: #00D264;
+    padding-bottom: 20px;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 6vh;
+    padding-bottom: 3vh;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 5px;
+}
+.form label{
+    font-family: 'Noto Serif Ahom', sans-serif;
+   
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    
+}
+h1{
+    color: white;
+    font-family: 'Noto Serif Ahom', sans-serif;
+}
+.form input{
+    width: 95vw;
+    outline: 0;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form input,
+.form label{
+    align-self: center;
+}
+.form select{
+    width: 95vw;
+    border: none;
+    outline: 0;
+    padding: 2px;
+    border-radius: 4px;
+}
+.form input[type="file"]{
+    display: none;
+}
+
+#img{
+    height: 140px;
+}
+#img label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: gray;
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+.form button{
+    margin-top: 20px;
+    height: 10vh;
+    width: 70vw;
+    background-color: #419F57;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.all a img{
+    top: 10px;
+    left: 10px;
+    /* position: absolute; */
+    width: 10vw;
+}
+
+.picture{
+    object-fit: cover;
+    height: 100%;
+    max-width: 90%;
+}
+
+/* img styles icon */
+
+.fa-solid.fa-arrow-right{
+    font-size: 2.5rem;
+    color: #ffffff;
+    rotate: 180deg;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#url{
+    display: none;
+}
