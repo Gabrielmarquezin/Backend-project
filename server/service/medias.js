@@ -12,11 +12,11 @@ const Media = {
           produtos.setTipo(item, collection, tamanho)
           const data = await produtos.getProduct()
 
-        for(let produto of data.data){
+        for(let produto of data){
             if(produto == undefined){
                 notFound.push(item)
             }else{
-                cestaPreco+=produto.preco
+                cestaPreco+=produto.data.preco
                 div++
             }
         }
