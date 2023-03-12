@@ -48,7 +48,7 @@ const load = document.getElementById('load')
        const data = Object.fromEntries(formData)
 
        try {
-           const request = await fetch("http://backend-project-l0bm1asm2-gabrielmarquezin.vercel.app/pages/criar", {
+           const request = await fetch("https://backend-project-l0bm1asm2-gabrielmarquezin.vercel.app/pages/criar", {
                method: "POST",
                body: formData
            })
