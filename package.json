@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/Gabrielmarquezin/Backend-project/issues"
   },
-  "type": "module",
+
   "homepage": "https://github.com/Gabrielmarquezin/Backend-project#readme",
   "dependencies": {
     "cors": "^2.8.5",

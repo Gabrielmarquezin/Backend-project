@@ -14,7 +14,7 @@ const firebaseConfig = {
   // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const GetUrlImg = (file)=>{
+ const GetUrlImg = (file)=>{
     
     const storage = getStorage(app);
     const spaceRef = ref(storage, `ProdutosImagens/${file.name}`);
@@ -36,3 +36,5 @@ export const GetUrlImg = (file)=>{
         })
     })
 }
+
+module.exports = GetUrlImg

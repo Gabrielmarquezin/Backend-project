@@ -1,5 +1,5 @@
 
-import { GetUrlImg } from "./fileUrl.mjs";
+const GetUrlImg = require('./fileUrl')
 
 const $file = document.getElementById('file');
 const $label = document.getElementById('labelfile');
