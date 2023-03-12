@@ -22,7 +22,7 @@
             <h1>ADICIONE OS DADOS</h1>
         </div>
         <div class="form">
-            <form method="POST" action="https://backend-project-jpcgox174-gabrielmarquezin.vercel.app/pages/atualizar" id="form" >
+            <form method="POST" action="https://localhost:2000/pages/atualizar" id="form" enctype="multipart/form-data">
                 
                 <label for="codigo">CODIGO DO PRODUTO</label>
                 <input type="text" name="codigo" id="codigo" required>
@@ -50,7 +50,7 @@
                 <br>
                 <div id="img">
                     <label for="file"><span>ESCOLHA UM PRODUTO</span></label>
-                    <input type="file" id="file" name="file">
+                    <input type="file" id="file" multiple name="file">
                     <input type="url" name="img" id="url"  style="display: none;">
                 </div><br>
                 <center>

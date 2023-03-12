@@ -14,7 +14,7 @@ const { get } = require('http')
 const port = process.env.PORT || 2000
 
 app.use(express.json())
-app.use(express.urlencoded({extended: false}))
+app.use(express.urlencoded({extended: true}))
 app.use(cors())
 app.use(express.static(path.join(__dirname,'public')))
 console.log(path.join(__dirname, 'public'))

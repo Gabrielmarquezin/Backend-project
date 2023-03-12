@@ -21,7 +21,7 @@
             <h1>ADICIONE OS DADOS</h1>
         </div>
         <div class="form">
-            <form method="POST" action="https://backend-project-jpcgox174-gabrielmarquezin.vercel.app/pages/criar" id="form">
+            <form method="POST" action="http://localhost:2000/pages/criar" id="form"  enctype="multipart/form-data">
                 <label>TIPO</label><br>
                 <input type="text" name="tipo"><br>
                 <label>MARCA</label><br>
@@ -44,7 +44,7 @@
                 <br>
                 <div id="img">
                     <label for="file" id="labelfile"><span>ESCOLHA UMA IMAGEM</span></label>
-                    <input type="file" id="file">
+                    <input  type="file" id="file" multiple name="file" required>
                     <input type="url" name="img" id="url">
                 </div><br>
                 <center>
@@ -61,6 +61,6 @@
         <div class="validation" id="validation" style="display: none;"><%= empty %></div>
 
     </div>
-    <script type="module" src="../../src/formulario/adicionar/script.js"></script>
+    <script  src="../../src/formulario/adicionar/script.js"></script>
 </body>
 </html> 
