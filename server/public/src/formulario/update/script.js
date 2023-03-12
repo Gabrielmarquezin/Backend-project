@@ -54,7 +54,7 @@ form.addEventListener('submit', async (e)=>{
           const res = await request.json()
           
           load.classList.toggle('blocked')
-          inputSubmit.innerHTML = 'ADICIONAR'
+          inputSubmit.innerHTML = 'ATUALIZAR'
 
           console.log(res)
 
