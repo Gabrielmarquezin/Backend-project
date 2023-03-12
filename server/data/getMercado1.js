@@ -58,7 +58,7 @@ class Produtos{
          const arrCategorias = []
          const categorias = await db.collection('categorias').orderBy('id').get()
          categorias.forEach(cat =>{
-            arrCategorias.push({data: cat.data(), codigo: cat.id()})
+            arrCategorias.push({data: cat.data(), codigo: cat.id})
          })
             
          return arrCategorias
