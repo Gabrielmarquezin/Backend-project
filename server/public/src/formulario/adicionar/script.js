@@ -54,7 +54,7 @@ inputSubmit.addEventListener('click', async (e)=>{
             data.img = url
          }
 
-         const request = await fetch("http:localhost:2000/pages/criar", {
+         const request = await fetch("https://backend-project-jpcgox174-gabrielmarquezin.vercel.app/pages/criar", {
              method: "POST",
              headers: {
                "Content-Type": "application/json"
