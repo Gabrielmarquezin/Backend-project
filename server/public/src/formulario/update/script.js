@@ -45,7 +45,7 @@ form.addEventListener('submit', async (e)=>{
   
       try {
          
-          const request = await fetch("http://localhost:2000/pages/atualizar", {
+          const request = await fetch("http://backend-project-l0bm1asm2-gabrielmarquezin.vercel.app/pages/atualizar", {
               method: "POST",
               body: formData
           })

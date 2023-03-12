@@ -15,7 +15,7 @@ inputSubmit.addEventListener('click', async (e)=>{
     const dataFo = Object.fromEntries(formData)
    
      try {
-        const request = await fetch("https://backend-project-jpcgox174-gabrielmarquezin.vercel.app/pages/deletar", {
+        const request = await fetch("https://backend-project-l0bm1asm2-gabrielmarquezin.vercel.app/pages/deletar", {
              method: "POST",
              headers: {
                "Content-Type": "application/json"
