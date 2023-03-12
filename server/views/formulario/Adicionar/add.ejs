@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADICIONAR</title>
     <link rel="stylesheet" href="../../styles/formulario/create/addE.css">
+    <link rel="stylesheet" href="../../styles/loading/loading.css">
 </head>
 <body>
     <div class="all">
@@ -22,35 +23,43 @@
         <div class="form">
             <form method="POST" action="http://localhost:2000/pages/criar" id="form">
                 <label>TIPO</label><br>
-                <input type="text" name="TIPO"><br>
+                <input type="text" name="tipo"><br>
                 <label>MARCA</label><br>
-                <input type="text" name="MARCA"><br>
+                <input type="text" name="marca"><br>
                 <label>PESO</label><br>
-                <input type="text" name="PESO"><br>
+                <input type="text" name="tamanho"><br>
                 <label>CLASSIFICAÇÃO</label><br>
-                <input type="text" name="CLASSIFICAÇÃO"><br>
+                <input type="text" name="classificacao"><br>
                 <label>ESTADO</label><br>
-                <input type="text" name="ESTADO"><br>
+                <input type="text" name="estado"><br>
                 <label>PREÇO</label><br>
-                <input type="text" name="PREÇO"><br>
+                <input type="text" name="preco"><br>
                 <label>SELECIONE O MERCADO</label><br>
-                <select>
-                    <option value="">NENHUM</option>
-                    <option value="">BIGA</option>
-                    <option value="">DEITON</option>
-                    <option value="">MERCADO SÃO FRANCISCO</option>
+                <select name="market">
+                    <option value="mercado">NENHUM</option>
+                    <option value="biga">BIGA</option>
+                    <option value="deirton">DEITON</option>
+                    <option value="francisco">MERCADO SÃO FRANCISCO</option>
                 </select><br>
                 <br>
                 <div id="img">
                     <label for="file" id="labelfile"><span>ESCOLHA UMA IMAGEM</span></label>
                     <input type="file" id="file">
-                    <input type="url" name="url" id="url">
+                    <input type="url" name="img" id="url">
                 </div><br>
                 <center>
-                    <button id="btnSubmit">ADICIONAR</button>
+                   <div class="btn">
+                        <button id="btnSubmit">ADICIONAR</button>
+                        <div class="loading blocked" id="load" >
+                            <div></div>
+                        </div>
+                   </div>
                 </center>
             </form>
         </div>
+
+        <div class="validation" id="validation" style="display: none;"><%= empty %></div>
+
     </div>
     <script type="module" src="../../src/formulario/adicionar/script.js"></script>
 </body>

@@ -14,7 +14,7 @@ class Produtos{
          const arr = []
          const getdata = await bd.collection(this.collection).orderBy('preco').get()
          getdata.forEach(pruducts =>{
-            arr.push(pruducts.data())
+            arr.push({data: pruducts.data(), codigo: pruducts.id})
          })
      
          return arr
@@ -31,7 +31,7 @@ class Produtos{
          const nameCollect = this.collection
          const produtos = await bd.collection(nameCollect).where('tipo', '==', `${this.tipo}`).orderBy('preco').get()
          produtos.forEach(product => {
-            docs.push(product.data())
+            docs.push({data: product.data(), codigo: product.id})
          })
 
         
@@ -58,7 +58,7 @@ class Produtos{
          const arrCategorias = []
          const categorias = await db.collection('categorias').orderBy('id').get()
          categorias.forEach(cat =>{
-            arrCategorias.push(cat.data())
+            arrCategorias.push({data: cat.data(), codigo: cat.id()})
          })
             
          return arrCategorias

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATUALIZAR</title>
     <link rel="stylesheet" href="../../styles/formulario/delete/deleteE.css">
+    <link rel="stylesheet" href="../../styles/loading/loading.css">
 </head>
 <body>
     <div class="all">
@@ -19,34 +20,30 @@
             <h1>DELETE OS DADOS</h1>
         </div>
         <div class="form">
-            <form method="POST" action="https://33c4-200-36-135-255.sa.ngrok.io/pages/deletar">
-                <label>TIPO</label><br>
-                <input type="text"><br>
-                <label>MARCA</label><br>
-                <input type="text"><br>
-                <label>PESO</label><br>
-                <input type="text"><br>
-                <label>CLASSIFICAÇÃO</label><br>
-                <input type="text"><br>
-                <label>ESTADO</label><br>
-                <input type="text"><br>
-                <label>PREÇO</label><br>
-                <input type="text"><br>
-                <label>SELECIONE O MERCADO</label><br>
-                <select>
-                    <option value="">NENHUM</option>
-                    <option value="">BIGA</option>
-                    <option value="">DEITON</option>
-                    <option value="">MERCADO SÃO FRANCISCO</option>
+            <form method="POST" action="https://33c4-200-36-135-255.sa.ngrok.io/pages/deletar" id="form">
+
+                <div class="input-group">
+                    <label for="codigo">DIGITE CODIGO DO PRODUTO</label>
+                    <input type="text" name="codigo" id="codigo">
+                </div>
+
+                <select name="market">
+                    <option value="mercado">NENHUM</option>
+                    <option value="biga">BIGA</option>
+                    <option value="deirton">DEITON</option>
+                    <option value="francisco">MERCADO SÃO FRANCISCO</option>
                 </select>
-                <br>
-                <br>
-                <br>
-                <center>
-                    <button>DELETE</button>
-                </center>
+
+                <div class="btn">
+                    <button id="btnSubmit">DELETAR</button>
+                    <div class="loading blocked" id="load" >
+                        <div></div>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
+
+    <script  src="../../src/formulario/delete/delete.js"></script>
 </body>
 </html>

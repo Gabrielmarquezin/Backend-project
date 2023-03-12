@@ -45,7 +45,7 @@ app.get('/pages/atualizar', async(req, res)=>{
     const tipos = await tipo.getCat()
     const atributs = await atributos.getAtributos()
 
-    res.render('formulario/Atualizar/update.ejs', {categorias: tipos, mercado: false, idDoc: false, empty: false, classificacoes: atributs.classificacoes, estados: atributs.estados})
+    res.render('formulario/Atualizar/update.ejs', {message: ''})
 })
 
 app.get('/pages/deletar', async(req, res)=>{

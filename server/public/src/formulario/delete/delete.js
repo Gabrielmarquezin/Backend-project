@@ -1,9 +1,46 @@
-const validation = document.getElementById('validation').innerText
 
-if(validation == 'excluido'){
-    alert('DOCUMENTO EXCLUIDO')
+const form = document.getElementById('form')
+const inputSubmit = document.getElementById('btnSubmit')
+const load = document.getElementById('load')
 
-}else if(validation == 'notExcluido'){
-    alert('FALHA AO EXCLUIR, COLOQUE DADOS VÁLIDOS')
-}
+
+inputSubmit.addEventListener('click', async (e)=>{
+
+    e.preventDefault()
+
+    load.classList.toggle('blocked')
+    inputSubmit.innerHTML = ''
+
+    const formData = new FormData(form)
+    const dataFo = Object.fromEntries(formData)
+   
+     try {
+        const request = await fetch("http://localhost:2000/pages/deletar", {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json"
+             },
+             body: JSON.stringify(dataFo)
+         })
+
+         
+
+         const res = await request.json()
+         
+         load.classList.toggle('blocked')
+         inputSubmit.innerHTML = 'ADICIONAR'
+
+         if(res == 'no-document'){
+            alert("Codigo Invalido")
+         }else{
+            alert("Produto deletado")
+         }
+     } catch (error) {
+       console.log("esse e o erro:  "+error)
+     }
+})
+
+
+
+
 

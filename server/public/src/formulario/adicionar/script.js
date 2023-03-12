@@ -36,20 +36,50 @@ $file.addEventListener('change', (e)=>{
 
 const form = document.getElementById('form')
 const inputSubmit = document.getElementById('btnSubmit')
+const load = document.getElementById('load')
 
-inputSubmit.addEventListener('click', (e)=>{
-    e.preventDefault()
-    const formData = new FormData(form)
-    const data = Object.fromEntries(formData)
+inputSubmit.addEventListener('click', async (e)=>{
+     
+     e.preventDefault()
 
-    GetUrlImg(objImg).then(url => {
-        data.url = url
-        console.log(data)
-    })
+     load.classList.toggle('blocked')
+     inputSubmit.innerHTML = ''
 
-   
+     const formData = new FormData(form)
+     const data = Object.fromEntries(formData)
+
+     try {
+         if(objImg !== {}){
+            const url = await GetUrlImg(objImg)
+            data.img = url
+         }
+
+         const request = await fetch("http:localhost:2000/pages/criar", {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json"
+             },
+             body: JSON.stringify(data)
+         })
+        
+         load.classList.toggle('blocked')
+         inputSubmit.innerHTML = 'ADICIONAR'
+     } catch (error) {
+         load.classList.toggle('blocked')
+         inputSubmit.innerHTML = 'ADICIONAR'
+         console.log(error)
+     }
 })
 
+
+const validation = document.getElementById('validation').innerText
+
+if(validation == 'exist'){
+    alert('DOCUMENTO JA EXISTE, ADICIONE UM NOVO')
+
+}else if(validation == 'DontExist'){
+    alert('DOCUMENTO ADICIONADO')
+}
 
 
 // if (file) {

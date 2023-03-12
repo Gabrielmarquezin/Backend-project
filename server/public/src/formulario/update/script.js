@@ -1,6 +1,10 @@
+import { GetUrlImg } from "../adicionar/fileUrl.mjs";
+
 const $file = document.getElementById('file');
 const $label = document.querySelector('#img label');
 const $span = document.querySelector('#img span');
+var objImg = {}
+$file.value = ""
 
 $file.addEventListener('change', (e)=>{
     const filee = e.target.files[0]
@@ -19,6 +23,7 @@ $file.addEventListener('change', (e)=>{
             $label.innerHTML = ""
             $label.appendChild(img)
          })
+         objImg = filee
 
          reader.readAsDataURL(filee)
 
@@ -28,22 +33,72 @@ $file.addEventListener('change', (e)=>{
 })
 
 
+const form = document.getElementById('form')
+const inputSubmit = document.getElementById('btnSubmit')
+const load = document.getElementById('load')
 
-// if (file) {
-//     const reader = new FileReader();
+inputSubmit.addEventListener('click', async (e)=>{
 
-//     reader.addEventListener("load", function (e) {
-//       const readerTarget = e.target;
+     e.preventDefault()
 
-//       const img = document.createElement("img");
-//       img.src = readerTarget.result;
-//       img.classList.add("picture__img");
+     load.classList.toggle('blocked')
+     inputSubmit.innerHTML = ''
 
-//       pictureImage.innerHTML = "";
-//       pictureImage.appendChild(img);
-//     });
+     const formData = new FormData(form)
+     const dataFo = Object.fromEntries(formData)
+    
+     if(dataFo.preco !== ''){
+        dataFo.preco = parseFloat(dataFo.preco)
+     }
 
-//     reader.readAsDataURL(file);
-//   } else {
-//     pictureImage.innerHTML = pictureImageTxt;
-//   }
+     if(dataFo.peso !== ''){
+        dataFo.peso = parseFloat(dataFo.peso)
+     }
+
+     const data = Object.fromEntries(Object.entries(dataFo).filter(([k,v])=>{
+        return v != "" &&  k != 'file'
+     }))
+
+      try {
+          if($file.value !== ""){
+            const url = await GetUrlImg(objImg)
+            data.img = url
+          }
+
+          const request = await fetch("http://localhost:2000/pages/atualizar", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify(data)
+          })
+
+          
+
+          const res = await request.json()
+          
+          load.classList.toggle('blocked')
+          inputSubmit.innerHTML = 'ADICIONAR'
+
+          if(res == 'no-document'){
+            alert('CODIGO INVALIDO')
+          }else{
+            alert('Atualizado')
+          }
+ 
+      } catch (error) {
+        console.log(error)
+      }
+})
+
+const validation = document.getElementById('validation').innerText
+
+if(validation == 'no-document'){
+    alert('CODIGO INVALIDO')
+}
+
+if(validation == 'atualizado'){
+    alert('DOCUMENTO ATUALIZADO')
+}
+
+

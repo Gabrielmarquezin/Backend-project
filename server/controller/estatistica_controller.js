@@ -11,11 +11,10 @@ async function StatistiController(req, res){
         produtos.setTipo(tipo, mercado, tamanho)
         const getProducts = await produtos.getProduct()
 
-        
         if(getProducts){
-            const ProductsPrices = getProducts.map(product => product.preco)
+            const ProductsPrices = getProducts.map(product => product.data.preco)
             const statisticData = CalStatistic(ProductsPrices)
-            
+        
             const ProductsData = {statisticData, Products: getProducts}
             res.status(200).send(ProductsData)
         }

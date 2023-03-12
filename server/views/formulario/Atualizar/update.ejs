@@ -11,46 +11,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATUALIZAR</title>
     <link rel="stylesheet" href="../../styles/formulario/update/updateE.css">
+    <link rel="stylesheet" href="../../styles/loading/loading.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/6a6ae047b2.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6a6ae047b2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="all">
-       <a href="/Codes/Form-Bene/src/Inicio/home.html"><img src="/Codes/Form-Bene/assets/SETA.png" alt=""></a>
+        <a href="http://localhost:2000"><i class="fa-solid fa-arrow-right"></i></a>
         <div class="text">
-            <h1>ATUALIZE OS DADOS</h1>
+            <h1>ADICIONE OS DADOS</h1>
         </div>
         <div class="form">
-            <form method="POST" action="https://33c4-200-36-135-255.sa.ngrok.io/pages/atualizar">
+            <form method="POST" action="http://localhost:2000/pages/atualizar" id="form" >
+                
+                <label for="codigo">CODIGO DO PRODUTO</label>
+                <input type="text" name="codigo" id="codigo" required>
+                <br>
                 <label>TIPO</label><br>
                 <input type="text" name="tipo"><br>
+
                 <label>MARCA</label><br>
                 <input type="text" name="marca"><br>
                 <label>PESO</label><br>
                 <input type="text" name="peso"><br>
                 <label>CLASSIFICAÇÃO</label><br>
-                <input type="text" name="classificação"><br>
+                <input type="text" name="classificacao"><br>
                 <label>ESTADO</label><br>
                 <input type="text" name="estado"><br>
                 <label>PREÇO</label><br>
-                <input type="text" name="preço"><br>
+                <input type="text" name="preco"><br>
                 <label>SELECIONE O MERCADO</label><br>
-                <select>
-                    <option value="">NENHUM</option>
-                    <option value="">BIGA</option>
-                    <option value="">DEITON</option>
-                    <option value="">MERCADO SÃO FRANCISCO</option>
+                <select name="market">
+                    <option value="mercado">NENHUM</option>
+                    <option value="biga">BIGA</option>
+                    <option value="deirton">DEIRTON</option>
+                    <option value="francisco">MERCADO SÃO FRANCISCO</option>
                 </select><br>
                 <br>
                 <div id="img">
                     <label for="file"><span>ESCOLHA UM PRODUTO</span></label>
                     <input type="file" id="file" name="file">
+                    <input type="url" name="img" id="url"  style="display: none;">
                 </div><br>
                 <center>
-                    <button>ATUALIZAR</button>
+                    <div class="btn">
+                        <button id="btnSubmit">ADICIONAR</button>
+                        <div class="loading blocked" id="load" >
+                            <div></div>
+                        </div>
+                   </div>
                 </center>
             </form>
         </div>
+
+        <div class="validation" id="validation" style="display: none;"><%= message %></div>
+
     </div>
 
-   <script src="../../src/formulario/update/script.js"></script>
+   <script type="module" src="../../src/formulario/update/script.js"></script>
 </body>
 </html>
