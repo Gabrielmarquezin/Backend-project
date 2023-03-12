@@ -1,3 +1,4 @@
+
 import { GetUrlImg } from "./fileUrl.mjs";
 
 const $file = document.getElementById('file');

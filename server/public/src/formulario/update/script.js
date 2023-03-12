@@ -1,3 +1,4 @@
+
 import { GetUrlImg } from "../adicionar/fileUrl.mjs";
 
 const $file = document.getElementById('file');
@@ -100,5 +101,3 @@ if(validation == 'no-document'){
 if(validation == 'atualizado'){
     alert('DOCUMENTO ATUALIZADO')
 }
-
-
