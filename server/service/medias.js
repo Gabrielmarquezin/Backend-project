@@ -16,7 +16,7 @@ const Media = {
             if(produto == undefined){
                 notFound.push(item)
             }else{
-                cestaPreco+=produto.preco
+                cestaPreco+=produto.data.preco
                 div++
             }
         }
