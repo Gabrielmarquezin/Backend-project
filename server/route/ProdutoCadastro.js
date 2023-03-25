@@ -26,8 +26,7 @@ RoutePost.post('/pages/atualizar',upload.any(), async (req, res)=>{
     const obj = body
     let id;
 
-    
-    if(files){
+    if(files && !typeof files == 'undefined'){
         for(let i = 0; i<files.length; i++){
             const a = await uploadFile(files[i])
             id = a
