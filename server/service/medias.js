@@ -29,6 +29,7 @@ const Media = {
         const biga = await setCollection('biga')
         const Francisco = await setCollection('francisco')
         const Deirton = await setCollection('deirton')
+        const rufino = await setCollection('rufino')
         
         const dataArr = [biga.NotFound, Deirton.NotFound, Francisco.NotFound]
         const arr = []
