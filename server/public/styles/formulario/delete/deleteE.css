@@ -90,3 +90,11 @@ h1{
     height: 100%;
     width: 100%; 
 }
+
+/* icone */
+.fa-solid.fa-arrow-right{
+    padding: 15px;
+    color: #ffffff;
+    rotate: 180deg;
+    font-size: 2rem;
+}
