@@ -37,7 +37,7 @@ class ProdutoStatistic{
             const arrProduct = []
 
             const Products = this.collections.map(async c =>{
-                const p = await db.collection(c).where('tipo', '==', product.tipo).get()
+                const p = await db.collection(c).where('tipo', '==', product.tipo).where('marca', '==', product.marca).get()
                 
                 p.forEach(element =>{
                     arrProduct.push(element.data())

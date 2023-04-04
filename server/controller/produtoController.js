@@ -4,7 +4,7 @@ async function ProdutoController(req, res){
     const id = req.query['id']
     const store  = req.params.mercado
 
-    const collections = ['biga', 'deirton', 'francisco']
+    const collections = ['biga', 'deirton', 'francisco', 'rufino']
 
     const Produto = new ProdutoStatistic(id, store, collections)
 
